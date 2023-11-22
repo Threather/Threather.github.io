@@ -20,7 +20,7 @@ window.onload = function() {
         document.getElementById("myTable").style.display = "none"; // Hide the table
         document.getElementById("iframe").style.display = "block"; // Show the iframe
         document.getElementById("backButton").style.display = "inline-block"; // Show the back button
-        document.getElementById("iframe").src = "file:///C:/Kevin/Git/Clon/Threather.github.io/hm-file/hm1.html"; // Set the source of the iframe
+        document.getElementById("iframe").src = "./hm-file/hm1.html"; // Set the source of the iframe
     });
 
     // Add an event listener to the button with id "backButton"
