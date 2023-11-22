@@ -6,16 +6,29 @@
 </head>
 <body>
     <h2>Kevin-ITE103-HW</h2>
-    <p>Student Name: Pom Kevin <br> Major: Computer Science</p>
+    <div id="studentInfo">
+      <p><span class="label">Class</span>: <span id="class"></span></p>
+      <p><span class="label">Professor</span>: <span id="professor"></span></p>
+      <p><span class="label">Student Name</span>: <span id="studentName"></span></p>  
+      <p><span class="label">Major</span>: <span id="studentMajor"></span></p>
+      <p><span class="label">UC-ID</span>: <span id="studentID"></span></p>
+  </div>
+  <script>
+      document.getElementById('class').textContent = 'ITE103(Evening)';
+      document.getElementById('professor').textContent = 'CHHUNNAN';
+      document.getElementById('studentName').textContent = 'Pom Kevin';
+      document.getElementById('studentMajor').textContent = 'Computer Science';
+      document.getElementById('studentID').textContent = '60230633';
+  </script>
     <button id="toggleButton"><strong>Click here to view my Homework</strong></button>
-<button id="backButton" style="display:inline-block;"><strong>Go Back</strong></button>
+    <button id="backButton" style="display:inline-block;"><strong>Go Back</strong></button>
     <table id="myTable">
         <tr>
-          <th id="a" style=color:black>Homework</th>
-          <th id="b" style=color:black>Date</th> 
-          <th id="c" style=color:black>Result</th>
+          <th id="a" >Homework</th>
+          <th id="b" >Date</th> 
+          <th id="c" >Result</th>
         </tr>
-        <tr>
+        <tr>    
           <td>1</td>
           <td>Friday, 10 November, 2023</td> 
           <td id="homework1Cell"><a href="#" id="homework1Link">Display</a></td>

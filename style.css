@@ -7,19 +7,21 @@
 
 /* Styling for the body */
 body {
-    background-color: #24292e; /* Dark gray color */
-    color: #ffffff; /* White color */
+    background-color: #181a1b; /* Darker gray color */
+    color: #a8a8a8; /* Light gray color */
     font-family: 'Mona Sans', sans-serif;
 }
 
 /* Styling for the h2 elements */
 h2 {
     text-decoration: underline;
+    color: #a8a8a8; /* Light gray color */
 }
 
 /* Styling for the table headers */
 #a, #b, #c {
     text-decoration: underline;
+    color: #a8a8a8; /* Light gray color */
 }
 
 /* Styling for the table */
@@ -29,15 +31,17 @@ table {
 
 /* Styling for the table cells */
 th, td {
-    border: 1px solid #dddddd; /* Adds a border around the cells */
+    border: 1px solid #a8a8a8; /* Light gray border around the cells */
     text-align: center; /* Centers the text */
     vertical-align: middle; /* Aligns it vertically in the middle */
     padding: 8px;
+    color: #a8a8a8; /* Light gray color */
 }
 
 /* Styling for the table header */
 th {
-    background-color: #f2f2f2; /* Adds a gray background to the header row */
+    background-color: #24292e; /* Dark gray background to the header row */
+    color: #a8a8a8; /* Light gray color */
 }
 
 /* Styling for the table id 'myTable' */
@@ -47,9 +51,9 @@ th {
 
 /* Styling for the button id 'toggleButton' */
 #toggleButton {
-    background-color: #24292e; /* Dark gray color */
-    color: #ffffff; /* White color */
-    border: 2px solid #ffffff; /* Adds a white border */
+    background-color: #181a1b; /* Darker gray color */
+    color: #a8a8a8; /* Light gray color */
+    border: 2px solid #a8a8a8; /* Light gray border */
     padding: 10px 20px; /* Reduces the size of the button */
     text-align: center;
     text-decoration: none;
@@ -59,10 +63,12 @@ th {
     cursor: pointer;
     border-radius: 12px;
 }
+
+/* Styling for the button id 'backButton' */
 #backButton {
-    background-color: #24292e; /* Dark gray color */
-    color: #ffffff; /* White color */
-    border: 2px solid #ffffff; /* Adds a white border */
+    background-color: #181a1b; /* Darker gray color */
+    color: #a8a8a8; /* Light gray color */
+    border: 2px solid #a8a8a8; /* Light gray border */
     padding: 10px 20px; /* Reduces the size of the button */
     text-align: center;
     text-decoration: none;
@@ -72,7 +78,34 @@ th {
     cursor: pointer;
     border-radius: 12px;
 }
+
 #backButton {
     display: none;
     /* rest of your styles... */
+}
+
+#studentInfo p {
+    margin: 0.2em 0;
+    font-family: 'Mona Sans', sans-serif; /* This should be the same as your button's font-family */
+    font-size: 14px; /* This should be the same as your button's font-size */
+}
+
+#studentInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.label {
+    display: inline-block;
+    width: 100px; /* Adjust this value as needed */
+    text-align: left;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.value {
+    display: inline-block;
+    width: 200px; /* Adjust this value as needed */
+    text-align: right;
 }
