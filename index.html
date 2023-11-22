@@ -3,12 +3,12 @@
 <head>
     <title>ITE103HW</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="script.js"></script>
 </head>
 <body>
-    <h2 >Kevin-ITE103-HW</h2>
+    <h2>Kevin-ITE103-HW</h2>
     <p>Student Name: Pom Kevin <br> Major: Computer Science</p>
     <button id="toggleButton"><strong>Click here to view my Homework</strong></button>
+<button id="backButton" style="display:inline-block;"><strong>Go Back</strong></button>
     <table id="myTable">
         <tr>
           <th id="a" style=color:black>Homework</th>
@@ -18,20 +18,17 @@
         <tr>
           <td>1</td>
           <td>Friday, 10 November, 2023</td> 
-          <td id="homework1Cell"></td>
+          <td id="homework1Cell"><a href="#" id="homework1Link">Display</a></td>
         </tr>
         <tr>
           <td>2</td>
           <td>Friday, 17 November, 2023</td> 
           <td></td>
         </tr>
-
         <!-- Add more rows as needed -->
-        <script src="script.js"></script>
       </table>
-    
-    
-
-    
+      <iframe id="iframe" style="display:none; width:100vw; height:100vh;"></iframe>
+      
+    <script src="script.js"></script>
 </body>
 </html>

@@ -59,3 +59,20 @@ th {
     cursor: pointer;
     border-radius: 12px;
 }
+#backButton {
+    background-color: #24292e; /* Dark gray color */
+    color: #ffffff; /* White color */
+    border: 2px solid #ffffff; /* Adds a white border */
+    padding: 10px 20px; /* Reduces the size of the button */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px; /* Reduces the font size */
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+#backButton {
+    display: none;
+    /* rest of your styles... */
+}
