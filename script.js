@@ -20,7 +20,16 @@ window.onload = function() {
         document.getElementById("myTable").style.display = "none"; // Hide the table
         document.getElementById("iframe").style.display = "block"; // Show the iframe
         document.getElementById("backButton").style.display = "inline-block"; // Show the back button
-        document.getElementById("iframe").src = "./hm-file/hm1.html"; // Set the source of the iframe
+        document.getElementById("iframe").src = "./hw-file/hw1.html"; // Set the source of the iframe
+    });
+
+    // Add an event listener to the link with id "homework2Link"
+    document.getElementById("homework2Link").addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent the default action
+        document.getElementById("myTable").style.display = "none"; // Hide the table
+        document.getElementById("iframe").style.display = "block"; // Show the iframe
+        document.getElementById("backButton").style.display = "inline-block"; // Show the back button
+        document.getElementById("iframe").src = "./hw-file/hw2.html"; // Set the source of the iframe
     });
 
     // Add an event listener to the button with id "backButton"
