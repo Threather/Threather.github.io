@@ -1,41 +1,65 @@
 window.onload = function() {
-    // When the page loads, set the display style of the table to "none"
-    document.getElementById("myTable").style.display = "none";
-    // Hide the "Go Back" button
-    document.getElementById("backButton").style.display = "none";
+    // Elements
+    var table = document.getElementById("myTable");
+    var iframe = document.getElementById("iframe");
+    var backButton = document.getElementById("backButton");
 
-    // Add an event listener to the button with id "toggleButton"
-    document.getElementById("toggleButton").addEventListener("click", function() {
-        var table = document.getElementById("myTable");
-        if (table.style.display === "none") {
-            table.style.display = "table"; // This makes the table visible
-        } else {
-            table.style.display = "none"; // This hides the table
-        }
-    });
+    // Student data
+    let studentData = {
+        "class": "ITE103(Evening)",
+        "professor": "CHHUNNAN",
+        "studentName": "Pom Kevin",
+        "studentMajor": "Computer Science",
+        "studentID": "60230633"
+    };
 
-    // Add an event listener to the link with id "homework1Link"
+    // Populate student data
+    for (let key in studentData) {
+        document.getElementById(key).textContent = studentData[key];
+    }
+
+    // Hide elements initially
+    hideElement(table);
+    hideElement(backButton);
+
+    // Event listeners
+    document.getElementById("toggleButton").addEventListener("click", toggleTable);
     document.getElementById("homework1Link").addEventListener("click", function(event) {
-        event.preventDefault(); // Prevent the default action
-        document.getElementById("myTable").style.display = "none"; // Hide the table
-        document.getElementById("iframe").style.display = "block"; // Show the iframe
-        document.getElementById("backButton").style.display = "inline-block"; // Show the back button
-        document.getElementById("iframe").src = "./hw-file/hw1.html"; // Set the source of the iframe
+        displayHomework(event, "./hw-file/hw1.html");
     });
-
-    // Add an event listener to the link with id "homework2Link"
     document.getElementById("homework2Link").addEventListener("click", function(event) {
-        event.preventDefault(); // Prevent the default action
-        document.getElementById("myTable").style.display = "none"; // Hide the table
-        document.getElementById("iframe").style.display = "block"; // Show the iframe
-        document.getElementById("backButton").style.display = "inline-block"; // Show the back button
-        document.getElementById("iframe").src = "./hw-file/hw2.html"; // Set the source of the iframe
+        displayHomework(event, "./hw-file/hw2.html");
     });
+    backButton.addEventListener("click", goBack);
 
-    // Add an event listener to the button with id "backButton"
-    document.getElementById("backButton").addEventListener("click", function() {
-        document.getElementById("myTable").style.display = "table"; // Show the table
-        document.getElementById("iframe").style.display = "none"; // Hide the iframe
-        document.getElementById("backButton").style.display = "none"; // Hide the back button
-    });
+    // Functions
+    function hideElement(element) {
+        element.style.display = "none";
+    }
+
+    function showElement(element, displayStyle) {
+        element.style.display = displayStyle;
+    }
+
+    function toggleTable() {
+        if (table.style.display === "none") {
+            showElement(table, "table");
+        } else {
+            hideElement(table);
+        }
+    }
+
+    function displayHomework(event, homeworkFile) {
+        event.preventDefault();
+        hideElement(table);
+        showElement(iframe, "block");
+        showElement(backButton, "inline-block");
+        iframe.src = homeworkFile;
+    }
+
+    function goBack() {
+        showElement(table, "table");
+        hideElement(iframe);
+        hideElement(backButton);
+    }
 };
