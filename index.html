@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Homework Page">
@@ -11,20 +11,23 @@
 </head>
 <body>
     <header>
-        <h2>Kevin-ITE103-HW</h2>
+        <h1>Kevin-ITE103-HW</h1>
     </header>
     <main>
-        <section id="studentInfo">
+        <article id="studentInfo">
+            <h2>Student Information</h2>
             <p><span class="label">Class</span>: <span id="class"></span></p>
             <p><span class="label">Professor</span>: <span id="professor"></span></p>
             <p><span class="label">Student Name</span>: <span id="studentName"></span></p>  
             <p><span class="label">Major</span>: <span id="studentMajor"></span></p>
             <p><span class="label">UC-ID</span>: <span id="studentID"></span></p>
-        </section>
+        </article>
         <section>
+            <h2>Homework</h2>
             <button id="toggleButton"><strong>Click here to view my Homework</strong></button>
             <button id="backButton"><strong>Go Back</strong></button>
             <table id="myTable">
+                <caption></caption>
                 <tr>
                     <th id="a" >Homework</th>
                     <th id="b" >Date</th> 
@@ -48,13 +51,6 @@
     <footer>
         <!-- You can add footer content here -->
     </footer>
-    <script>
-        document.getElementById('class').textContent = 'ITE103(Evening)';
-        document.getElementById('professor').textContent = 'CHHUNNAN';
-        document.getElementById('studentName').textContent = 'Pom Kevin';
-        document.getElementById('studentMajor').textContent = 'Computer Science';
-        document.getElementById('studentID').textContent = '60230633';
-    </script>
     <script src="script.js"></script>
 </body>
 </html>
