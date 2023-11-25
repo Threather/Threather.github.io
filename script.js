@@ -24,6 +24,7 @@ window.onload = function() {
 
     // Event listeners
     document.getElementById("toggleButton").addEventListener("click", toggleTable);
+    
     document.getElementById("homework1Link").addEventListener("click", function(event) {
         displayHomework(event, "./hw-file/hw1.html");
     });
@@ -37,11 +38,19 @@ window.onload = function() {
 
     // Functions
     function hideElement(element) {
-        element.style.display = "none";
+        element.style.opacity = "0";
+        element.style.transform = "scaleY(0)";
+        setTimeout(function() {
+            element.style.display = "none";
+        }, 500); // this matches the duration of your transition
     }
 
     function showElement(element, displayStyle) {
         element.style.display = displayStyle;
+        setTimeout(function() {
+            element.style.opacity = "1";
+            element.style.transform = "scaleY(1)";
+        }, 0);
     }
 
     function toggleTable() {
@@ -54,15 +63,21 @@ window.onload = function() {
 
     function displayHomework(event, homeworkFile) {
         event.preventDefault();
-        hideElement(table);
-        showElement(iframe, "block");
+        table.style.display = "none"; // Hide the table immediately
+        iframe.style.display = "block";
+        setTimeout(function() {
+            iframe.style.opacity = "1";
+            iframe.style.transform = "scaleY(1)";
+        }, 0);
         showElement(backButton, "inline-block");
         iframe.src = homeworkFile;
     }
 
     function goBack() {
-        showElement(table, "table");
         hideElement(iframe);
+        setTimeout(function() {
+            showElement(table, "table");
+        }, 500);
         hideElement(backButton);
     }
 };
