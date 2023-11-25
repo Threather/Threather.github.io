@@ -90,3 +90,8 @@ th {
     width: 200px;
     text-align: right;
 }
+table {
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    transform-origin: top;
+}
+
