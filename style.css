@@ -10,7 +10,7 @@ body {
     background-color: #181a1b;
     color: #a8a8a8;
     font-family: 'Mona Sans', sans-serif;
-    background-image: url('Photo/1.jpg');
+
     background-position: right center;
     background-repeat: no-repeat;
     background-size: 40%;
@@ -20,14 +20,17 @@ body {
 
 /* Header Styling */
 #aboutMe {
-    text-decoration: underline;
-    color: #a8a8a8;
-    cursor: pointer; /* Changes the cursor to a hand when hovering over the header */
-    font-size: 15;
-    padding: 10px; /* Adds some space around the header */
-    border: 1px solid #a8a8a8; /* Adds a border around the header */
-    border-radius: 5px; /* Rounds the corners of the border */
-    display: inline-block; /* Allows the border to fit the content */
+    background-color: #181a1b; /* Change this to the color you want */
+    color: #a8a8a8; /* Change this to the color you want */
+    padding: 10px 20px; /* Adjust this to change the size of the button */
+    text-decoration: none;
+    border-radius: 5px; /* Adjust this to change the roundness of the button corners */
+    transition: background-color 0.3s ease; /* This adds a smooth transition effect when the button is hovered over */
+    font-weight: bold;
+}
+#aboutMe:hover {
+    background-color: #a8a8a8; /* Change this to the color you want when the button is hovered over */
+    color: #181a1b; /* Change this to the color you want when the button is hovered over */
 }
 
 /* Student Info Styling */
@@ -35,6 +38,7 @@ body {
     margin: 0.2em 0; /* Adjust this value to change the space between the lines */
     font-family: 'Mona Sans', sans-serif;
     font-size: 14px;
+
 }
 
 .label {
