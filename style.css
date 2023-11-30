@@ -36,13 +36,13 @@ body {
     padding-top: 20px;
 }
 
-#studentInfo p, #experienceInfo p, #experienceInfo ul li, #skillInfo ul li {
+#studentInfo p, #experienceInfo p, #experienceInfo ul li, #skillInfo td {
     margin: 0.2em 0;
     font-family: 'Mona Sans', sans-serif;
     font-size: 14px;
 }
 
-#skillInfo ul li span {
+#skills .skill-name {
     font-weight: bold;
 }
 
@@ -83,7 +83,14 @@ body {
     list-style-type: none;
 }
 
-#skillInfo ul li::before {
+#skills .skill-name::before {
     content: "● ";
     font-size: 15px;
+}
+#skills {
+    width: 100%;
+}
+
+#skills td:first-child {
+    width: 105px; /* Adjust this value to your liking */
 }
