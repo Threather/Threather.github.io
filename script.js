@@ -1,18 +1,29 @@
 // Get the 'About me' header
-var header = document.querySelector('#aboutMe');
+var aboutMeHeader = document.querySelector('#aboutMe');
+
+// Get the 'Experience' header
+var experienceHeader = document.querySelector('#experience');
 
 // Get the 'studentInfo' div
-var info = document.querySelector('#studentInfo');
+var studentInfo = document.querySelector('#studentInfo');
 
-// Initially hide the 'studentInfo' div
-info.style.display = 'none';
+// Get the 'experienceInfo' div
+var experienceInfo = document.querySelector('#experienceInfo');
 
-// Add a click event listener to the header
-header.addEventListener('click', function() {
-    // Toggle the display property of the 'studentInfo' div
-    if (info.style.display === 'none') {
-        info.style.display = 'block';
-    } else {
-        info.style.display = 'none';
-    }
+// Initially hide the 'studentInfo' and 'experienceInfo' divs
+studentInfo.style.display = 'none';
+experienceInfo.style.display = 'none';
+
+// Add a click event listener to the 'About me' header
+aboutMeHeader.addEventListener('click', function() {
+    // Show the 'studentInfo' div and hide the 'experienceInfo' div
+    studentInfo.style.display = 'block';
+    experienceInfo.style.display = 'none';
+});
+
+// Add a click event listener to the 'Experience' header
+experienceHeader.addEventListener('click', function() {
+    // Show the 'experienceInfo' div and hide the 'studentInfo' div
+    experienceInfo.style.display = 'block';
+    studentInfo.style.display = 'none';
 });
