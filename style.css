@@ -10,14 +10,13 @@ body {
     background-color: #181a1b;
     color: #a8a8a8;
     font-family: 'Mona Sans', sans-serif;
-
     background-position: right center;
     background-repeat: no-repeat;
     background-size: 40%;
 }
 
 /* Header Styling */
-#aboutMe {
+#aboutMe, #experience, #skill {
     background-color: #181a1b;
     color: #a8a8a8;
     padding: 10px 20px;
@@ -26,74 +25,65 @@ body {
     transition: background-color 0.3s ease;
     font-weight: bold;
 }
-#aboutMe:hover {
+
+#aboutMe:hover, #experience:hover, #skill:hover {
     background-color: #a8a8a8;
     color: #181a1b;
 }
 
 /* Student Info Styling */
-#studentInfo p {
+#studentInfo, #experienceInfo,#skillInfo {
+    padding-top: 20px;
+}
+
+#studentInfo p, #experienceInfo p, #experienceInfo ul li, #skillInfo ul li {
     margin: 0.2em 0;
     font-family: 'Mona Sans', sans-serif;
     font-size: 14px;
 }
-#studentInfo {
-    padding-top: 20px;
-}
-#experienceInfo {
-    padding-top: 20px;
+
+#skillInfo ul li span {
+    font-weight: bold;
 }
 
-.label {
+.label, .period {
     display: inline-block;
-    width: 160px;
     text-align: left;
     margin-right: 10px;
     vertical-align: middle;
+}
+
+.label {
+    width: 160px;
+}
+
+.period {
+    width: 50px;
 }
 
 .value {
     display: inline-block;
     text-align: left;
 }
-#experience {
-    background-color: #181a1b;
-    color: #a8a8a8;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    font-weight: bold;
-}
-#experience:hover{
-    background-color: #a8a8a8;
-    color: #181a1b;
-}
-.period {
-    display: inline-block;
-    width: 50px;
-    text-align: left;
-    margin-right: 10px;
-    vertical-align: middle;
-}
-#experienceInfo {
-    font-family: 'Mona Sans', sans-serif;
-}
 
-#experienceInfo ul li {
-    font-size: 14px;
-}
 .responsibility {
     margin-top: 20px; /* Adjust this value to add more or less space */
     margin-bottom: 0.1em;
 }
-#experienceInfo p {
-    margin: 0.2em 0;
+
+.responsibility-list {
+    margin-top: 0;
 }
 
 #experienceInfo p:first-child {
     margin-bottom: 0.1em;
 }
-.responsibility-list {
-    margin-top: 0;
+
+#skillInfo ul {
+    list-style-type: none;
+}
+
+#skillInfo ul li::before {
+    content: "● ";
+    font-size: 15px;
 }
