@@ -51,6 +51,7 @@ body {
     text-align: left;
     margin-right: 10px;
     vertical-align: middle;
+
 }
 
 .label {
@@ -100,4 +101,12 @@ body {
 .larger, .larger .strong {
     font-size: 100px; /* Adjust this value to your liking */
     font-weight: bold;
+}
+#experienceInfo h2, #experienceInfo h3, #experienceInfo h4 {
+    margin-top: 0.5em; /* Adjust this value to your liking */
+    margin-bottom: 0.5em; /* Adjust this value to your liking */
+}
+#experienceInfo .experience {
+    margin-top: 1em; /* Adjust this value to your liking */
+    margin-bottom: 3em; /* Adjust this value to your liking */
 }
