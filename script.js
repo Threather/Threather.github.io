@@ -34,3 +34,18 @@ for (let header in headers) {
         hideAllExcept(header);
     });
 }
+var navLinks = document.querySelectorAll('#aboutMe, #experience, #skill');
+
+navLinks.forEach(function(link) {
+    link.addEventListener('click', function() {
+        if (this.classList.contains('active')) {
+            this.classList.remove('active');
+        } else {
+            navLinks.forEach(function(link) {
+                link.classList.remove('active');
+            });
+            this.classList.add('active');
+        }
+    });
+});
+

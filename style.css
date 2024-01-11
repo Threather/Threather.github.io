@@ -1,112 +1,180 @@
-/* Importing the 'Mona Sans' font */
-@font-face {
-    font-family: 'Mona Sans';
-    src: url('MonaSans.woff2') format('woff2'),
-         url('MonaSans.woff') format('woff');
-}
+    /* Importing the 'Mona Sans' font */
+    @font-face {
+        font-family: 'Mona Sans';
+        src: url('MonaSans.woff2') format('woff2'),
+            url('MonaSans.woff') format('woff');
+    }
 
-/* General Styling */
-body {
-    background-color: #181a1b;
-    color: #a8a8a8;
-    font-family: 'Mona Sans', sans-serif;
-    background-position: right center;
-    background-repeat: no-repeat;
-    background-size: 40%;
-}
+    /* General Styling */
+    body {
+        background-color: #181a1b;
+        color: #a8a8a8;
+        font-family: 'Mona Sans', sans-serif;
+        background-position: right center;
+        background-repeat: no-repeat;
+        background-size: 40%;
+    }
 
-/* Header Styling */
-#aboutMe, #experience, #skill {
-    background-color: #181a1b;
-    color: #a8a8a8;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    font-weight: bold;
-}
+    /* Header Styling */
+    #aboutMe, #experience, #skill {
+        background-color: #181a1b;
+        color: #a8a8a8;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        font-weight: bold;
+    }
 
-#aboutMe:hover, #experience:hover, #skill:hover {
-    background-color: #a8a8a8;
-    color: #181a1b;
-}
+    #aboutMe:hover, #experience:hover, #skill:hover {
+        background-color: #a8a8a8;
+        color: #181a1b;
+    }
 
-/* Student Info Styling */
-#studentInfo, #experienceInfo,#skillInfo {
-    padding-top: 20px;
-}
+    /* Student Info Styling */
+    #studentInfo, #experienceInfo, #skillInfo {
+        padding-top: 20px;
+    }
 
-#studentInfo p, #experienceInfo p, #experienceInfo ul li, #skillInfo td {
-    margin: 0.2em 0;
-    font-family: 'Mona Sans', sans-serif;
-    font-size: 14px;
-}
+    #studentInfo p, #experienceInfo p, #experienceInfo ul li, #skillInfo td {
+        margin: 0.2em 0;
+        font-family: 'Mona Sans', sans-serif;
+        font-size: 14px;
+    }
 
-#skills .skill-name {
-    font-weight: bold;
-}
+    /* Skills Styling */
+    #skills {
+        width: 100%;
+    }
 
-.label, .period {
-    display: inline-block;
-    text-align: left;
-    margin-right: 10px;
-    vertical-align: middle;
+    #skills .skill-name {
+        font-weight: bold;
+    }
 
-}
+    #skills .skill-name::before {
+        content: "● ";
+        font-size: 15px;
+    }
 
-.label {
-    width: 160px;
-}
+    #skills td:first-child {
+        width: 105px; /* Adjust this value to your liking */
+    }
 
-.period {
-    width: 50px;
-}
+    /* Label and Period Styling */
+    .label, .period {
+        display: inline-block;
+        text-align: left;
+        margin-right: 10px;
+        vertical-align: middle;
+    }
 
-.value {
-    display: inline-block;
-    text-align: left;
-}
+    .label {
+        width: 160px;
+    }
 
-.responsibility {
-    margin-top: 20px; /* Adjust this value to add more or less space */
-    margin-bottom: 0.1em;
-}
+    .period {
+        width: 50px;
+    }
 
-.responsibility-list {
-    margin-top: 0;
-}
+    .value {
+        display: inline-block;
+        text-align: left;
+    }
 
-#experienceInfo p:first-child {
-    margin-bottom: 0.1em;
-}
+    /* Responsibility Styling */
+    .responsibility {
+        margin-top: 20px; /* Adjust this value to add more or less space */
+        margin-bottom: 0.1em;
+    }
 
-#skillInfo ul {
-    list-style-type: none;
-}
+    .responsibility-list {
+        margin-top: 0;
+    }
 
-#skills .skill-name::before {
-    content: "● ";
-    font-size: 15px;
-}
-#skills {
-    width: 100%;
-}
+    /* Experience Info Styling */
+    #experienceInfo {
+        margin-top: 1em; /* Adjust this value to your liking */
+        margin-bottom: 3em; /* Adjust this value to your liking */
+    }
 
-#skills td:first-child {
-    width: 105px; /* Adjust this value to your liking */
-}
-.larger .value {
-    font-size: 20px; /* Adjust this value to your liking */
-}
-.larger, .larger .strong {
-    font-size: 100px; /* Adjust this value to your liking */
-    font-weight: bold;
-}
-#experienceInfo h2, #experienceInfo h3, #experienceInfo h4 {
-    margin-top: 0.5em; /* Adjust this value to your liking */
-    margin-bottom: 0.5em; /* Adjust this value to your liking */
-}
-#experienceInfo .experience {
-    margin-top: 1em; /* Adjust this value to your liking */
-    margin-bottom: 3em; /* Adjust this value to your liking */
-}
+    #experienceInfo h2, #experienceInfo h3, #experienceInfo h4 {
+        margin-top: 0.5em; /* Adjust this value to your liking */
+        margin-bottom: 0.5em; /* Adjust this value to your liking */
+    }
+
+    #experienceInfo p:first-child {
+        margin-bottom: 0.1em;
+    }
+
+    /* Skill Info Styling */
+    #skillInfo ul {
+        list-style-type: none;
+    }
+
+    /* Active Styling */
+    #aboutMe.active, #experience.active, #skill.active {
+        background-color: #a8a8a8;
+        color: #181a1b;
+    }
+
+    /* Root Styling */
+    :root {
+        --nav-position: 15%;
+    }
+
+    /* Navigation Styling */
+    nav {
+        position: absolute;
+        top: var(--nav-position);
+        left: 0;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Container Styling */
+    .container {
+        display: flex;
+    }
+
+    .left-side {
+        flex: 10%; 
+      
+    }
+
+    .right-side {
+        flex: 90%; 
+    }
+    .column {
+        display: flex; /* This will make the .column a flex container */
+        flex-wrap: wrap; /* This allows the items to wrap onto multiple lines */
+    }
+    
+    .experience {
+        flex: 1 0 50%; /* This will make each .experience take up 50% of the width of .column */
+        box-sizing: border-box; /* This ensures padding and border are included in the element's total width and height */
+        
+    }
+    .column {
+        display: flex;
+        position: relative;
+    }
+    .column::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        border-left: 1px solid #a8a8a8;
+    }
+    .experience {
+        flex: 1 0 50%; /* This will make each .experience take up 50% of the width of .column */
+        box-sizing: border-box; /* This ensures padding and border are included in the element's total width and height */
+        padding: 0 20px; /* This adds 20px of space to the left and right of the text inside each .experience */
+    }
+    
+    
+    
+    
+
+    
