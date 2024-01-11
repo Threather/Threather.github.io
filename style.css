@@ -172,6 +172,24 @@
         box-sizing: border-box; /* This ensures padding and border are included in the element's total width and height */
         padding: 0 20px; /* This adds 20px of space to the left and right of the text inside each .experience */
     }
+    .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        background-color:#a8a8a8; /* Dark background, similar to your buttons */
+        color:black; /* Light text, similar to your buttons */
+        border: 1px solid #a8a8a8; /* Light gray border */
+        border-radius: 5px; /* Rounded corners */
+        padding: 10px; /* Some padding */
+        margin-bottom: 20px; /* Space below the header */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* A little shadow */
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    
     
     
     
