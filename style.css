@@ -205,3 +205,41 @@ nav {
         flex: 1 0 auto; /* This will make each .experience take up the full width of .column */
     }
 }
+
+#project {
+    background-color: #181a1b;
+    color: #a8a8a8;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+#project:hover {
+    background-color: #a8a8a8;
+    color: #181a1b;
+}
+
+#project.active {
+    background-color: #a8a8a8;
+    color: #181a1b;
+}
+.project-title {
+    cursor : pointer;
+    color: #a8a8a8;
+    font-weight: bold;
+}
+.project-title:hover{
+
+    color: pink;
+}
+.project-details li {
+    font-size: 0.9em; /* Makes the text smaller */
+    font-weight: normal;
+}
+.project-details {
+    padding-bottom: 13px; /* Adds space at the bottom */
+}
+
+

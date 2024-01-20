@@ -2,14 +2,17 @@
 var headers = {
     'aboutMe': document.querySelector('#aboutMe'),
     'experience': document.querySelector('#experience'),
-    'skill': document.querySelector('#skill')
+    'skill': document.querySelector('#skill'),
+    'project': document.querySelector('#project')
+
 };
 
 // Get the sections
 var sections = {
     'aboutMe': document.querySelector('#studentInfo'),
     'experience': document.querySelector('#experienceInfo'),
-    'skill': document.querySelector('#skillInfo')
+    'skill': document.querySelector('#skillInfo'),
+    'project' : document.querySelector('#projectInfo')  
 };
 
 // Initially hide all sections
@@ -34,7 +37,7 @@ for (let header in headers) {
         hideAllExcept(header);
     });
 }
-var navLinks = document.querySelectorAll('#aboutMe, #experience, #skill');
+var navLinks = document.querySelectorAll('#aboutMe, #experience, #skill, #project');
 
 navLinks.forEach(function(link) {
     link.addEventListener('click', function() {
@@ -48,4 +51,13 @@ navLinks.forEach(function(link) {
         }
     });
 });
-
+['project1', 'project2', 'project3'].forEach(function(projectId) {
+    document.querySelector('#' + projectId).addEventListener('click', function() {
+        var details = document.querySelector('#' + projectId + '-details');
+        if (details.style.display === 'none') {
+            details.style.display = 'block';
+        } else {
+            details.style.display = 'none';
+        }
+    });
+});
