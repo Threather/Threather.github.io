@@ -51,7 +51,7 @@ navLinks.forEach(function(link) {
         }
     });
 });
-['project1', 'project2', 'project3'].forEach(function(projectId) {
+['project1', 'project2', 'project3', 'project4', 'project5', 'project6'].forEach(function(projectId) {
     document.querySelector('#' + projectId).addEventListener('click', function() {
         var details = document.querySelector('#' + projectId + '-details');
         if (details.style.display === 'none') {
